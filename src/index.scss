@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Kyiv Type Titling';
+  color: #fff;
 }
 
 body {
@@ -10,6 +10,11 @@ body {
   background-image: url('./assets/images/main-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Inter', sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 .container {
