@@ -21,3 +21,9 @@ ul {
   margin-inline: auto;
   max-width: 1200px;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    padding-inline: 30px;
+  }
+}

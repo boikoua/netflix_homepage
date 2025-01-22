@@ -25,3 +25,47 @@
     transform: scale(1.1);
   }
 }
+
+@media (max-width: 1024px) {
+  .header {
+    padding-block: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-block: 20px;
+  }
+
+  .search {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 425px) {
+  .left,
+  .right {
+    gap: 10px;
+  }
+
+  .search {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left {
+    margin-bottom: 20px;
+  }
+
+  .right {
+    margin-left: auto;
+  }
+}

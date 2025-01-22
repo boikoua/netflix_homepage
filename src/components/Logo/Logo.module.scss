@@ -9,3 +9,19 @@
     transform: scale(1.1);
   }
 }
+
+@media (max-width: 768px) {
+  .logo {
+    & > img {
+      width: 130px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .logo {
+    & > img {
+      width: 100px;
+    }
+  }
+}

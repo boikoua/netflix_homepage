@@ -4,3 +4,15 @@
   font-weight: 500;
   line-height: 29px;
 }
+
+@media (max-width: 768px) {
+  .date {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .date {
+    font-size: 16px;
+  }
+}

@@ -49,13 +49,13 @@ const Carousel = () => {
         </div>
       </div>
 
-      <div className={styles.bottom}>
+      {/* <div className={styles.bottom}>
         <div className={styles.posters} style={{ left: '-110px' }}>
           {showPosters}
         </div>
 
         <Age age={16} />
-      </div>
+      </div> */}
     </section>
   );
 };

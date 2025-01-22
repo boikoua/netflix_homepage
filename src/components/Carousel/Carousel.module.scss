@@ -54,6 +54,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .posters {
@@ -62,4 +63,34 @@
   flex-direction: row-reverse;
   justify-content: start;
   gap: 40px;
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .btns {
+    gap: 16px;
+  }
+
+  .btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .disabled {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    margin-right: 10px;
+  }
+
+  .btns {
+    gap: 12px;
+  }
 }
