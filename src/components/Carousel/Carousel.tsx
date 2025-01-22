@@ -6,16 +6,19 @@ import Age from '../Age';
 import { useState } from 'react';
 
 const Carousel = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
 
-  const handlePlusStep = () => {
+  const handleRightClick = () => {
     setStep((prev) => prev + 1);
+    console.log(step);
   };
 
-  const handleMinusStep = () => {
-    if (step > 1) {
+  const handleLeftClick = () => {
+    if (step) {
       setStep((prev) => prev - 1);
+      console.log(step);
     }
+    console.log(step);
   };
 
   const showPosters = posters.map((item, index) => (
@@ -31,8 +34,9 @@ const Carousel = () => {
 
             <div className={styles.btns}>
               <button
-                onClick={handleMinusStep}
+                onClick={handleLeftClick}
                 className={`${styles.btn} ${styles.disabled}`}
+                disabled={step === 0}
               >
                 <img
                   src={arrowIcon}
@@ -41,7 +45,11 @@ const Carousel = () => {
                 />
               </button>
 
-              <button onClick={handlePlusStep} className={styles.btn}>
+              <button
+                onClick={handleRightClick}
+                className={styles.btn}
+                disabled={step === posters.length - 1}
+              >
                 <img src={arrowIcon} alt="Right" />
               </button>
             </div>
@@ -49,13 +57,15 @@ const Carousel = () => {
         </div>
       </div>
 
-      {/* <div className={styles.bottom}>
-        <div className={styles.posters} style={{ left: '-110px' }}>
-          {showPosters}
+      <div className={styles.bottom}>
+        <div className={styles.postersWrapper}>
+          <div className={styles.posters} style={{ right: `${-188 * step}px` }}>
+            {showPosters}
+          </div>
         </div>
 
         <Age age={16} />
-      </div> */}
+      </div>
     </section>
   );
 };

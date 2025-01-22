@@ -38,23 +38,31 @@
   &:hover {
     box-shadow: 5px 5px 20px #fff;
   }
-}
 
-.disabled {
-  width: 38px;
-  height: 38px;
-  border-color: rgb(167, 166, 166);
+  &:disabled {
+    width: 38px;
+    height: 38px;
+    border-color: rgb(167, 166, 166);
 
-  & > img {
-    opacity: 0.6;
+    & > img {
+      opacity: 0.6;
+    }
   }
 }
 
 .bottom {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.postersWrapper {
+  position: relative;
+  left: -110px;
+  min-width: 1100px;
+  overflow: hidden;
 }
 
 .posters {
@@ -63,6 +71,20 @@
   flex-direction: row-reverse;
   justify-content: start;
   gap: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .postersWrapper {
+    left: -220px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .postersWrapper {
+    left: -400px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -83,6 +105,10 @@
     width: 30px;
     height: 30px;
   }
+
+  .postersWrapper {
+    left: -750px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -92,5 +118,9 @@
 
   .btns {
     gap: 12px;
+  }
+
+  .postersWrapper {
+    left: -850px;
   }
 }
