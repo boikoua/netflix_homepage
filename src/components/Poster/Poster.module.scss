@@ -1,12 +1,16 @@
+@use './../../styles/variables' as vars;
+@use './../../styles/mixins' as mixins;
+
 .poster {
   width: 151px;
   max-height: 210px;
-  border: 1px solid #fff;
-  transition: all 0.3s;
+  border: 1px solid vars.$poster-border-color;
   cursor: pointer;
 
+  @include mixins.transitionAll;
+
   &:hover {
-    box-shadow: 5px 5px 20px #fff;
+    box-shadow: 5px 5px 20px vars.$poster-border-color;
   }
 
   & > img {

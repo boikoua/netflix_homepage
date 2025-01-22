@@ -1,6 +1,9 @@
+@use './../../styles/mixins' as mixins;
+
 .user {
-  transition: all 0.3s;
   cursor: pointer;
+
+  @include mixins.transitionAll;
 
   & > img {
     width: 74px;
@@ -13,7 +16,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.tablet-portrait {
   .user {
     & > img {
       width: 60px;
@@ -22,7 +25,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@include mixins.phone-large {
   .user {
     & > img {
       width: 48px;

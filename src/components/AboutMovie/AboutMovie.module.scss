@@ -1,3 +1,6 @@
+@use './../../styles/variables' as vars;
+@use './../../styles/mixins' as mixins;
+
 .wrapper {
   max-width: 860px;
 }
@@ -14,7 +17,7 @@
     line-height: 39px;
 
     & > span {
-      color: rgb(167, 166, 166);
+      color: vars.$info-text-color;
     }
   }
 }
@@ -44,21 +47,22 @@
   min-width: 272px;
   text-align: center;
   border: none;
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid vars.$btn-border-color;
   border-radius: 10px;
   font-size: 22px;
   font-weight: 500;
   line-height: 141.52%;
-  transition: all 0.3s;
   cursor: pointer;
+
+  @include mixins.transitionAll;
 }
 
 .btnRed {
-  background: rgb(213, 13, 31);
-  border-color: rgb(213, 13, 31);
+  background: vars.$btn-show-bg-color;
+  border-color: vars.$btn-show-bg-color;
 
   &:hover {
-    box-shadow: 5px 5px 20px rgb(213, 13, 31);
+    box-shadow: 5px 5px 20px vars.$btn-show-bg-color;
   }
 }
 
@@ -66,11 +70,11 @@
   background-color: transparent;
 
   &:hover {
-    box-shadow: 5px 5px 20px rgb(255, 255, 255);
+    box-shadow: 5px 5px 20px vars.$btn-shadow-color;
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.tablet-portrait {
   .info {
     & > li {
       font-size: 20px;
@@ -96,7 +100,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@include mixins.phone-large {
   .info {
     & > li {
       font-size: 12px;

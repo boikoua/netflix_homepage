@@ -1,3 +1,5 @@
+@use './../../styles/mixins' as mixins;
+
 .genres {
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.tablet-portrait {
   .genres {
     & > li {
       font-size: 24px;
@@ -20,7 +22,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@include mixins.phone-large {
   .genres {
     & > li {
       font-size: 18px;
@@ -29,7 +31,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@include mixins.phone-small {
   .genres {
     & > li {
       font-size: 14px;

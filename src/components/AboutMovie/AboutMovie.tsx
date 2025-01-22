@@ -1,16 +1,10 @@
 import Line from '../Line';
-
-import styles from './AboutMovie.module.scss';
-import { IMovie } from '../../interfaces/IMovie';
-import React from 'react';
 import Genres from '../Genres';
 import Rating from '../Rating';
+import { testMovie as movie } from '../../api/movies';
+import styles from './AboutMovie.module.scss';
 
-type Props = {
-  movie: IMovie;
-};
-
-const AboutMovie: React.FC<Props> = ({ movie }) => {
+const AboutMovie = () => {
   const {
     title,
     genres,

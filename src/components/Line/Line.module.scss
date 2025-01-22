@@ -1,23 +1,26 @@
+@use './../../styles/variables' as vars;
+@use './../../styles/mixins' as mixins;
+
 .line {
   display: block;
   height: 28px;
   width: 3px;
-  background-color: #fff;
+  background-color: vars.$line-bg-color;
 }
 
-@media (max-width: 768px) {
+@include mixins.tablet-portrait {
   .line {
     height: 24px;
   }
 }
 
-@media (max-width: 425px) {
+@include mixins.phone-large {
   .line {
     height: 20px;
   }
 }
 
-@media (max-width: 320px) {
+@include mixins.phone-small {
   .line {
     height: 16px;
   }

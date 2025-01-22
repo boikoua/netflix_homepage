@@ -1,3 +1,5 @@
+@use './../../styles/mixins' as mixins;
+
 .header {
   padding-block: 40px;
 }
@@ -18,21 +20,22 @@
 .search {
   width: 36px;
   height: 36px;
-  transition: all 0.3s;
   cursor: pointer;
+
+  @include mixins.transitionAll;
 
   &:hover {
     transform: scale(1.1);
   }
 }
 
-@media (max-width: 1024px) {
+@include mixins.tablet-landscape {
   .header {
     padding-block: 30px;
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.tablet-portrait {
   .header {
     padding-block: 20px;
   }
@@ -43,7 +46,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@include mixins.phone-large {
   .left,
   .right {
     gap: 10px;
@@ -55,7 +58,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@include mixins.phone-small {
   .wrapper {
     flex-wrap: wrap;
     justify-content: center;

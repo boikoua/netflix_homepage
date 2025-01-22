@@ -1,0 +1,23 @@
+.blockHeader,
+.blockMain,
+.blockFooter {
+  opacity: 0;
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+.blockHeader {
+  transform: translateX(-100%);
+}
+
+.blockMain {
+  transform: translateX(200%);
+}
+
+.blockFooter {
+  transform: translateX(-100%);
+}
+
+.slideIn {
+  opacity: 1;
+  transform: translateX(0);
+}

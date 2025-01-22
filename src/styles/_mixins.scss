@@ -1,0 +1,27 @@
+@mixin transitionAll {
+  transition: all 0.3s;
+}
+
+@mixin tablet-landscape {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone-large {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin phone-small {
+  @media (max-width: 320px) {
+    @content;
+  }
+}

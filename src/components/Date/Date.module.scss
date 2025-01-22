@@ -1,17 +1,21 @@
+@use './../../styles/variables' as vars;
+@use './../../styles/mixins' as mixins;
+
 .date {
-  color: rgb(200, 200, 200);
+  font-family: 'Kyiv Type Titling', sans-serif;
+  color: vars.$date-text-color;
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
 }
 
-@media (max-width: 768px) {
+@include mixins.tablet-portrait {
   .date {
     font-size: 20px;
   }
 }
 
-@media (max-width: 425px) {
+@include mixins.phone-large {
   .date {
     font-size: 16px;
   }

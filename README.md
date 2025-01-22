@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# Netflix Homepage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is a front-end clone of the Netflix homepage, developed using Vite, React, and TypeScript. It features modular CSS styles implemented with SCSS as a preprocessor. The design was made fully responsive, ensuring compatibility with all major device screen sizes, from desktops to tablets and mobile devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal was to recreate the design and functionality of Netflix's main page, showcasing responsiveness, modern UI/UX practices, clean code architecture, and reusable components.
 
-## Expanding the ESLint configuration
+## Technologies that have been used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- HTML5
+- CSS3
+- SCSS
+- JAVASCRIPT (ES6+)
+- TYPESCRIPT
+- REACT
+- GIT
+- VITE
 
-- Configure the top-level `parserOptions` property like this:
+## Instructions for working with the project
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Cloning a repository. You need to write `git clone https://github.com/boikoua/netflix_homepage` in terminal.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Go to the project folder `cd netflix_homepage`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. Check the node version. The version of node should be `v20.x.x`. To do this, type the command `node -v` in the terminal.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+4. Install dependencies. To do this, enter the `npm install` command.
+
+5. Run the project. To do this, enter the `npm run dev` command.
+   After that the project will be available to you at `http://http://localhost:5173/`.
+
+## View project
+
+> Link to the project
+> [DEMO LINK](https://boikoua.github.io/netflix_homepage/).
+
+> Link to website layout in Figma
+> [Netflix Homepage](<https://www.figma.com/file/p5lOe7ymTodeAuXuvCWZvm/Netflix_Homepage-(Community)?node-id=0%3A1>)
+
+## Preview
+
+![Preview](./preview.jpg)

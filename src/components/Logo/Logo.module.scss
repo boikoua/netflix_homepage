@@ -1,5 +1,7 @@
+@use './../../styles/mixins' as mixins;
+
 .logo {
-  transition: all 0.3s;
+  @include mixins.transitionAll;
 
   & > img {
     width: 156px;
@@ -10,7 +12,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.tablet-portrait {
   .logo {
     & > img {
       width: 130px;
@@ -18,7 +20,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@include mixins.phone-large {
   .logo {
     & > img {
       width: 100px;

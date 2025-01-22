@@ -1,3 +1,6 @@
+@use './../../styles/variables' as vars;
+@use './../../styles/mixins' as mixins;
+
 .age {
   position: relative;
   display: flex;
@@ -9,14 +12,14 @@
   position: absolute;
   width: 33px;
   height: 100%;
-  background: rgb(213, 13, 31);
+  background: vars.$age-second-bg-color;
 }
 
 .right {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.49);
+  background: vars.$age-bg-color;
   width: 174px;
 
   & > span {
@@ -26,7 +29,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@include mixins.tablet-landscape {
   .age {
     position: absolute;
     right: 0;
@@ -34,7 +37,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include mixins.tablet-portrait {
   .age {
     height: 60px;
     width: 154px;
@@ -47,7 +50,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@include mixins.phone-large {
   .age {
     height: 50px;
     width: 134px;
