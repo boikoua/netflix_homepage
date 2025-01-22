@@ -11,7 +11,9 @@ function App() {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
-    setShowHeader(true);
+    setTimeout(() => {
+      setShowHeader(true);
+    }, 300);
 
     setTimeout(() => {
       setShowMain(true);
