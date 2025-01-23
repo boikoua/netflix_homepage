@@ -43,15 +43,19 @@
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   padding-block: 16px;
   min-width: 272px;
-  text-align: center;
   border: none;
   border: 3px solid vars.$btn-border-color;
   border-radius: 10px;
   font-size: 22px;
   font-weight: 500;
   line-height: 141.52%;
+  text-transform: uppercase;
   cursor: pointer;
 
   @include mixins.transitionAll;

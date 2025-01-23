@@ -3,6 +3,7 @@ import Genres from '../Genres';
 import Rating from '../Rating';
 import { testMovie as movie } from '../../api/movies';
 import styles from './AboutMovie.module.scss';
+import playIcon from './../../assets/images/icons/play.svg';
 
 const AboutMovie = () => {
   const {
@@ -44,12 +45,13 @@ const AboutMovie = () => {
           <Rating rating={rating} />
 
           <div className={styles.btns}>
-            <button className={`${styles.btn} ${styles.btnRed}`}>
-              Stream now
-            </button>
-            <button className={`${styles.btn} ${styles.btnEmpty}`}>
+            <a href="#" className={`${styles.btn} ${styles.btnRed}`}>
+              <span>Stream now</span>
+              <img src={playIcon} alt="Play movie" />
+            </a>
+            <a href="#" className={`${styles.btn} ${styles.btnEmpty}`}>
               All episodes
-            </button>
+            </a>
           </div>
         </div>
       </div>

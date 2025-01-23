@@ -10,15 +10,12 @@ const Carousel = () => {
 
   const handleRightClick = () => {
     setStep((prev) => prev + 1);
-    console.log(step);
   };
 
   const handleLeftClick = () => {
     if (step) {
       setStep((prev) => prev - 1);
-      console.log(step);
     }
-    console.log(step);
   };
 
   const showPosters = posters.map((item, index) => (
